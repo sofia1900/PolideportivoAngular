@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PartidosComponent } from './partidos/partidos.component';
+import {ComunModule} from "./comun/comun.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PartidosComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ComunModule
   ],
   providers: [],
   bootstrap: [AppComponent]
