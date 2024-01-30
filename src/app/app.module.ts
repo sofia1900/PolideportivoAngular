@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ComunModule} from "./comun/comun.module";
-import {NgOptimizedImage} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 
 
@@ -14,6 +14,7 @@ import {NgOptimizedImage} from "@angular/common";
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     ComunModule,
     NgOptimizedImage
