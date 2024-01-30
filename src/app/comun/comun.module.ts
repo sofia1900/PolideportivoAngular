@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { PieComponent } from './pie/pie.component';
+import {RouterLink} from "@angular/router";
+import {ComunRoutingModule} from "./comun-routing.module";
 
 @NgModule({
   exports : [
@@ -15,8 +17,10 @@ import { PieComponent } from './pie/pie.component';
     CabeceraComponent,
     PieComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+      CommonModule,
+      RouterLink,
+      ComunRoutingModule
+    ]
 })
 export class ComunModule { }

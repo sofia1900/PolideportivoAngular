@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ComunModule} from "./comun/comun.module";
 
+
 @NgModule({
   declarations: [
     AppComponent
