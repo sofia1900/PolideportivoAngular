@@ -5,6 +5,12 @@
   </div>
 
   <!-- Lista -->
+  <div *ngIf="partidos.length != 0 ; else vacio">
+
+  </div>
+  <ng-template #vacio>
+    <div>NO HAY PARTIDOS</div>
+  </ng-template>
 
 </div>
 

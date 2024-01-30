@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {partidos_data} from "../data/partidos.data";
+import {Partido} from "../modelos/partido";
+import {Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +9,7 @@ import {Observable} from "rxjs";
 export class PartidosService {
   constructor() { }
 
-  getPartidos () {
-    return of(Parti)
+  getPartidos () : Observable<Partido[]> {
+    return of(partidos_data)
   }
 }

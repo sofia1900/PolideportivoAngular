@@ -1,22 +1,24 @@
-export const partidos_data = [{
+import {Partido} from "../modelos/partido";
+
+export const partidos_data: Partido[] = [{
   "idLocal" : "ATHCLU(ESP)",
-  "idVistante" : "DEPORT(ESP)",
-  "timestamp" : 1585810194286,
+  "idVisitante" : "DEPORT(ESP)",
+  "fechaHora" : "15/2/2020 8:49",
   "goles" : [
     {
       "idParticipante" : "AUTHCLU(ESP)",
-      "timestamp" : 1585810194285
+      "fechaHora" : "15/2/2020 9:20"
     },
     {
       "idParticipante" : "AUTHCLU(ESP)",
-      "timestamp" : 1585810194285
+      "fechaHora" : "15/2/2020 9:35"
     },
   ],
   "tarjetas" : [
     {
       "idParticipante" : "DEPORT(ESP)",
       "tipoTarjeta" : "AMARILLA",
-      "timestamp" : 1585810318772
+      "fechaHora" : "15/2/2020 9:50"
     }
   ]
 }]
