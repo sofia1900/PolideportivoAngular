@@ -5,8 +5,15 @@
   </div>
 
   <!-- Lista -->
-  <div *ngIf="partidos.length != 0 ; else vacio">
-
+  <div *ngIf="partidos.length > 0 ; else vacio">
+    <table>
+      <tbody>
+        <tr *ngFor="let partido of partidos">
+          <td>{{partido.fechaHora}}</td>
+          <td>{{partido.idLocal}} - {{partido.idVisitante}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <ng-template #vacio>
     <div>NO HAY PARTIDOS</div>

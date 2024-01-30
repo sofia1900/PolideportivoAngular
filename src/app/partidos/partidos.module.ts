@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {PartidoListaComponent} from "./partido-lista/partido-lista.component";
 import {PartidosRoutingModule} from "./patidos-routing.module";
-
+import {NgOptimizedImage} from "@angular/common";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import {PartidosRoutingModule} from "./patidos-routing.module";
   ],
   imports: [
     CommonModule,
-    PartidosRoutingModule
+    BrowserModule,
+    PartidosRoutingModule,
+    NgOptimizedImage
   ]
 })
-export class PartidosModule { }
+export class PartidosModule {
+}
