@@ -1,14 +1,14 @@
 <div style="padding: 50px">
   <!-- Search -->
   <div class="md-form active-cyan-2 mb-3">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <input [(ngModel)]="buscador" class="form-control" type="text" placeholder="Search" aria-label="Search">
   </div>
 
   <!-- Lista -->
   <div *ngIf="partidos.length > 0 ; else vacio">
     <table>
       <tbody>
-        <tr *ngFor="let partido of partidos">
+        <tr *ngFor="let partido of partidosFiltrados()">
           <td>{{partido.fechaHora}}</td>
           <td>{{partido.idLocal}} - {{partido.idVisitante}}</td>
         </tr>

@@ -10,13 +10,19 @@ import {Partido} from "../../modelos/partido";
 export class PartidoListaComponent implements OnInit {
 
   partidos: Partido[] = []
-
+  buscador: string = ""
   constructor(private service: PartidosService) {
   }
 
   ngOnInit() {
     this.service.getPartidos().subscribe(partidos =>
       this.partidos = partidos)
+  }
+
+  partidosFiltrados() {
+    return this.partidos.filter(partido =>
+      partido.idLocal.toLowerCase().includes(this.buscador.toLowerCase()) ||
+      partido.idVisitante.toLowerCase().includes(this.buscador.toLowerCase()))
   }
 
 

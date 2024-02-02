@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ComunModule} from "./comun/comun.module";
 import {CommonModule, NgOptimizedImage} from "@angular/common";
+import {PartidosModule} from "./partidos/partidos.module";
 
 
 
@@ -17,7 +18,8 @@ import {CommonModule, NgOptimizedImage} from "@angular/common";
     CommonModule,
     AppRoutingModule,
     ComunModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    PartidosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
