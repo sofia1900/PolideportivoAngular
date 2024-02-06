@@ -1,22 +1,24 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {PartidoListaComponent} from "./partido-lista/partido-lista.component";
+import {PartidoListaComponent} from "./partidos/partido-lista/partido-lista.component";
 import {PartidosRoutingModule} from "./patidos-routing.module";
 import {NgOptimizedImage} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import { PartidosComponent } from './partidos/partidos.component';
 
 
 @NgModule({
   declarations: [
-    PartidoListaComponent
+    PartidoListaComponent,
+    PartidosComponent
   ],
   exports : [
-    PartidoListaComponent
+    PartidoListaComponent,
+    PartidosComponent
   ],
   imports: [
     CommonModule,
-    BrowserModule,
     PartidosRoutingModule,
     NgOptimizedImage,
     FormsModule

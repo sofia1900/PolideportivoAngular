@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PartidosService} from "../../servicios/partidos.service";
-import {Partido} from "../../modelos/partido";
+import {PartidosService} from "../../../servicios/partidos.service";
+import {Partido} from "../../../modelos/partido";
 
 @Component({
   selector: 'app-partido-lista',
