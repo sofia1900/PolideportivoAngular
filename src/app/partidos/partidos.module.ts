@@ -13,10 +13,6 @@ import { PartidosComponent } from './partidos/partidos.component';
     PartidoListaComponent,
     PartidosComponent
   ],
-  exports : [
-    PartidoListaComponent,
-    PartidosComponent
-  ],
   imports: [
     CommonModule,
     PartidosRoutingModule,

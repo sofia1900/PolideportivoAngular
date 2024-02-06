@@ -5,7 +5,8 @@ import {NoDisponibleComponent} from "./comun/no-disponible/no-disponible.compone
 import {PartidosComponent} from "./partidos/partidos/partidos.component";
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent,
+  loadChildren : () => import('./comun/comun.module').then(m=>  m.ComunModule)},
 
   {path: 'no-disponible', component: NoDisponibleComponent},
   {
