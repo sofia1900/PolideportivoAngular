@@ -1,0 +1,16 @@
+#izq {
+  background-color: lightgray;
+}
+
+#content{
+  position: absolute;
+  height: 87%;
+  margin-bottom: 20px;
+}
+
+#izq img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
