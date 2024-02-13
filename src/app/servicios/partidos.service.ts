@@ -12,4 +12,8 @@ export class PartidosService {
   getPartidos () : Observable<Partido[]> {
     return of(partidos_data)
   }
+
+  newPartido (partido : Partido) {
+    partidos_data.push(partido)
+  }
 }
