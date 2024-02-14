@@ -1,1 +1,48 @@
-<p>detail-partido works!</p>
+<div class="row">
+  <div class="col-9">
+    <a [routerLink]="['/partidos']">Volver a partidos</a>
+  </div>
+  <div class="col-3">
+    <button class="btn-primary" style="margin-right: 10px;">Editar</button>
+    <button class="btn-primary">Eliminar</button>
+  </div>
+</div>
+<div style="margin-top: 50px">
+  <h4 style="text-align: center">{{partido.fechaHora}}</h4>
+  <div style="display: flex; justify-content: space-around; margin-top: 30px">
+    <div>
+      <h3>{{partido.idLocal}}</h3>
+      <div *ngFor="let tarjeta of partido.tarjetas">
+        <p *ngIf="tarjeta.idParticipante == partido.idLocal">
+          {{tarjeta.fechaHora}} Tarjeta {{tarjeta.tipoTarjeta}}
+        </p>
+      </div>
+      <div *ngFor="let gol of partido.goles">
+        <p *ngIf="gol.idParticipante == partido.idLocal">
+          {{gol.fechaHora}} GOL
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3>{{golesLocal}} - {{golesVisitante}}</h3>
+    </div>
+    <div>
+      <h3>{{partido.idVisitante}}</h3>
+      <div *ngFor="let tarjeta of partido.tarjetas">
+        <p *ngIf="tarjeta.idParticipante == partido.idVisitante">
+          {{tarjeta.fechaHora}} Tarjeta {{tarjeta.tipoTarjeta}}
+        </p>
+      </div>
+      <div *ngFor="let gol of partido.goles">
+        <p *ngIf="gol.idParticipante == partido.idVisitante">
+          {{gol.fechaHora}} GOL
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 50px">
+  <button style="margin: 0">Añadir suceso</button>
+</div>
+
+

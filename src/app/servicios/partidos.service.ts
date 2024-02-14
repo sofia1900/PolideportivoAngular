@@ -17,11 +17,14 @@ export class PartidosService {
     partidos_data.push(partido)
   }
 
-  getPartidoById(id : number): Partido {
+  getPartidoById(id : number) : Partido {
+    let partidoElegido : Partido
     for (let partido of partidos_data){
       if (partido.id == id){
-        return partido
+        partidoElegido = partido
+        break
       }
     }
+    return partidoElegido!
   }
 }
