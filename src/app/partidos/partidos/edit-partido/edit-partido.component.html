@@ -1,0 +1,34 @@
+<h2>Editar partido</h2>
+<form [formGroup]="formularioPartido" (ngSubmit)="submit()">
+  <p>
+    Equipo local
+    <br>
+    <select formControlName="local" style="width: 100%">
+      <option>--selecciona un equipo--</option>
+      <option *ngFor="let equipo of equipos_data">{{equipo.id}}</option>
+    </select>
+    <span *ngIf="formularioPartido.get('local')?.errors?.['equipoRequired']"> Campo obligatorio </span>
+  </p>
+  <p>
+    Equipo visitante
+    <br>
+    <select formControlName="visitante" style="width: 100%">
+      <option>--selecciona un equipo--</option>
+      <option *ngFor="let equipo of equipos_data">{{equipo.id}}</option>
+    </select>
+    <span *ngIf="formularioPartido.get('visitante')?.errors?.['equipoRequired']"> Campo obligatorio </span>
+  </p>
+  <div>
+    Fecha
+    <input type="date" formControlName="date" required>
+    <span *ngIf="formularioPartido.get('date')?.errors?.['required']"> Campo obligatorio </span>
+    Hora
+    <input type="time" formControlName="time" required>
+    <span *ngIf="formularioPartido.get('time')?.errors?.['required']"> Campo obligatorio </span>
+  </div>
+  <br>
+  <p>
+    <button type="submit" class="btn-primary" style="margin-right: 10px">Guardar</button>
+    <button class="btn-primary" (click)="volver()">Cancelar</button>
+  </p>
+</form>

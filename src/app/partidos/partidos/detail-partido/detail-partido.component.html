@@ -3,7 +3,7 @@
     <a [routerLink]="['/partidos']">Volver a partidos</a>
   </div>
   <div class="col-3">
-    <button class="btn-primary" style="margin-right: 10px;">Editar</button>
+    <button class="btn-primary" style="margin-right: 10px;" [routerLink]="['/partidos/edit', partido.id]">Editar</button>
     <button class="btn-primary">Eliminar</button>
   </div>
 </div>

@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PartidosComponent } from './partidos/partidos.component';
 import { NewPartidoComponent } from './partidos/new-partido/new-partido.component';
 import { DetailPartidoComponent } from './partidos/detail-partido/detail-partido.component';
+import { EditPartidoComponent } from './partidos/edit-partido/edit-partido.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DetailPartidoComponent } from './partidos/detail-partido/detail-partido
     PartidoListaComponent,
     PartidosComponent,
     NewPartidoComponent,
-    DetailPartidoComponent
+    DetailPartidoComponent,
+    EditPartidoComponent
   ],
   imports: [
     CommonModule,

@@ -27,4 +27,13 @@ export class PartidosService {
     }
     return partidoElegido!
   }
+
+  editPartido (partidoElegido : Partido){
+    for (let partido of partidos_data){
+      if (partido.id == partidoElegido.id){
+        partido = partidoElegido
+        break
+      }
+    }
+  }
 }
