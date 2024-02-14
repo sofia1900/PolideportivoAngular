@@ -1,4 +1,5 @@
 export interface Partido {
+  id : number
   idLocal : string,
   idVisitante : string,
   fechaHora : string,

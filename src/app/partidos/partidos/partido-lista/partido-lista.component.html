@@ -8,7 +8,7 @@
   <div *ngIf="partidos.length > 0 ; else vacio">
     <table>
       <tbody>
-        <tr *ngFor="let partido of partidosFiltrados()">
+        <tr *ngFor="let partido of partidosFiltrados()" [routerLink]="['detail/', partido.id]">
           <td>{{partido.fechaHora}}</td>
           <td>{{partido.idLocal}} - {{partido.idVisitante}}</td>
         </tr>

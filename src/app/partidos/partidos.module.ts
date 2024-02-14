@@ -6,13 +6,15 @@ import {NgOptimizedImage} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PartidosComponent } from './partidos/partidos.component';
 import { NewPartidoComponent } from './partidos/new-partido/new-partido.component';
+import { DetailPartidoComponent } from './partidos/detail-partido/detail-partido.component';
 
 
 @NgModule({
   declarations: [
     PartidoListaComponent,
     PartidosComponent,
-    NewPartidoComponent
+    NewPartidoComponent,
+    DetailPartidoComponent
   ],
   imports: [
     CommonModule,

@@ -26,7 +26,10 @@ export class NewPartidoComponent {
 
   submit() {
     if (this.formularioPartido.valid){
+      const fechaHoraCompleta = new Date();
+      const timeMs = fechaHoraCompleta.getTime();
       let partido: Partido = {
+        id : timeMs,
         idLocal: this.formularioPartido.value.local!,
         idVisitante: this.formularioPartido.value.visitante!,
         fechaHora: this.formularioPartido.value.date!.toString() + " " + this.formularioPartido.value.time!.toString(),

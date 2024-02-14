@@ -2,6 +2,7 @@ import {Partido} from "../modelos/partido";
 
 export const partidos_data: Partido[] = [
   {
+    "id" : 1,
     "idLocal" : "ATHCLU(ESP)",
     "idVisitante" : "DEPORT(ESP)",
     "fechaHora" : "15/2/2020 8:49",
@@ -23,6 +24,7 @@ export const partidos_data: Partido[] = [
       }
     ]
   }, {
+    "id" : 2,
     "idLocal": "FCBARC(ESP)",
     "idVisitante": "VIREAL(ESP)",
     "fechaHora": "15/2/2020 9:35",
@@ -48,6 +50,7 @@ export const partidos_data: Partido[] = [
       }
     ]
   }, {
+    "id" : 3,
     "idLocal": "MALAGA(ESP)",
     "idVisitante": "EIBAR(ESP)",
     "fechaHora": "15/2/2020 9:35",
@@ -88,6 +91,7 @@ export const partidos_data: Partido[] = [
     ]
   },
   {
+    "id" : 4,
     "idLocal": "GETAFE(ESP)",
     "idVisitante": "BETIS(ESP)",
     "fechaHora": "15/2/2020 9:35",
@@ -106,6 +110,7 @@ export const partidos_data: Partido[] = [
     ]
   },
   {
+    "id" : 5,
     "idLocal": "RMADRID(ESP)",
     "idVisitante": "LEVANT(ESP)",
     "fechaHora": "15/2/2020 9:35",

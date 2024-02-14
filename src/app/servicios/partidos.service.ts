@@ -16,4 +16,12 @@ export class PartidosService {
   newPartido (partido : Partido) {
     partidos_data.push(partido)
   }
+
+  getPartidoById(id : number): Partido {
+    for (let partido of partidos_data){
+      if (partido.id == id){
+        return partido
+      }
+    }
+  }
 }
