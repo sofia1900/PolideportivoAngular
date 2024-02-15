@@ -1,0 +1,19 @@
+<div style="padding: 10px">
+  <!-- Search -->
+  <div class="md-form active-cyan-2 mb-3">
+    <input [(ngModel)]="buscador" class="form-control" type="text" placeholder="Search" aria-label="Search">
+  </div>
+
+  <!-- Lista -->
+  <div *ngIf="equiposFiltrados().length > 0 ; else vacio" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+    <div style="width: 300px; height: 100px ; border: 2px solid black; margin:10px; text-align: center;" *ngFor="let equipo of equiposFiltrados()">
+      <h3>{{equipo.id}}</h3>
+    </div>
+  </div>
+  <ng-template #vacio>
+    <div>NO HAY EQUIPOS</div>
+  </ng-template>
+
+</div>
+
+
