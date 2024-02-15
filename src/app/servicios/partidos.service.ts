@@ -36,4 +36,24 @@ export class PartidosService {
       }
     }
   }
+
+  contarPartidos(equipo : string){
+    let numPartidos = 0;
+    for (let partido of partidos_data){
+      if (partido.idLocal == equipo || partido.idVisitante == equipo){
+        numPartidos ++;
+      }
+    }
+    return numPartidos;
+  }
+
+  partidosEquipo (equipo : string) {
+    let partidos : Partido[] = []
+    for (let partido of partidos_data){
+      if (partido.idLocal == equipo || partido.idVisitante == equipo){
+        partidos.push(partido)
+      }
+    }
+    return partidos;
+  }
 }

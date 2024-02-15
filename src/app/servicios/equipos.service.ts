@@ -13,4 +13,14 @@ export class EquiposService {
   getEquipos () : Observable<Equipo[]>{
         return of (equipos_data)
   }
+
+  buscarEquipo(id : string): Equipo{
+    let e : Equipo;
+    for (let equipo of equipos_data){
+      if(equipo.id == id){
+        e = equipo
+      }
+    }
+    return e!
+  }
 }

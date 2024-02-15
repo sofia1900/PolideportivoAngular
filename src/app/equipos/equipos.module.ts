@@ -5,13 +5,17 @@ import {RouterLink, RouterOutlet} from "@angular/router";
 import { EquiposListaComponent } from './equipos/equipos-lista/equipos-lista.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {EquiposRoutingModule} from "./equipos-routing.module";
+import { EquipoDetalleComponent } from './equipos/equipo-detalle/equipo-detalle.component';
+import { EquipoPartidosComponent } from './equipos/equipo-detalle/equipo-partidos/equipo-partidos.component';
 
 
 
 @NgModule({
   declarations: [
     EquiposComponent,
-    EquiposListaComponent
+    EquiposListaComponent,
+    EquipoDetalleComponent,
+    EquipoPartidosComponent
   ],
   imports: [
     EquiposRoutingModule,

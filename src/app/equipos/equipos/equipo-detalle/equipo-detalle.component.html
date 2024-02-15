@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-9">
+    <a [routerLink]="['/equipos']">Volver a equipos</a>
+  </div>
+  <div class="col-3">
+    <button class="btn-primary" style="margin-right: 10px;">Editar</button>
+    <button class="btn-primary">Eliminar</button>
+  </div>
+</div>
+<br><br><br>
+<div class="row" style="text-align: center">
+  <h3>{{equipo.nombre}}</h3>
+</div>
+<br>
+<div class="row">
+  <div class="col">
+    Nombre: {{equipo.nombre}}
+  </div>
+  <div class="col">
+    Identificador: {{equipo.id}}
+  </div>
+</div>
+<br><br>
+<div class="row">
+  <a  class="col" [routerLink]="['equipo-partidos', equipo.id]">Partidos</a>
+  <a  class="col" [routerLink]="['tarjetas']">Tarjetas</a>
+  <a  class="col" [routerLink]="['goles']">Goles</a>
+</div>
+<br>
+<div>
+  <router-outlet></router-outlet>
+</div>
