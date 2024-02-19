@@ -13,30 +13,40 @@ import {equipos_data} from "../../../data/equipos";
 })
 export class EditPartidoComponent implements OnInit {
 
-  idPartido! : number;
-  partido! : Partido;
+  idPartido!: number;
+  partido!: Partido;
 
-  formularioPartido! : FormGroup<{local: FormControl<string | null>, visitante: FormControl<string | null>, date: FormGroup<string>, time: FormGroup<string>}>
+  formularioPartido!: FormGroup<{
+    local: FormControl<string | null>;
+    visitante: FormControl<string | null>;
+    date: FormControl<string | null>;
+    time: FormControl<string | null>;
+  }>
 
 
-  constructor(private service: PartidosService, private router : Router, private route : ActivatedRoute) {}
+  constructor(private service: PartidosService, private router: Router, private route: ActivatedRoute) {
+  }
 
-  ngOnInit(){
+  ngOnInit() {
     this.idPartido = this.route.snapshot.params['id'];
     this.partido = this.service.getPartidoById(this.idPartido);
 
+    const fechaHora = this.partido.fechaHora.split(' ');
+    const fecha = fechaHora[0]
+    const hora = fechaHora[1]
+
     this.formularioPartido = new FormGroup({
-      local: new FormControl(this.partido.idLocal , [ValidacionEquipo.equipoRequired]),
+      local: new FormControl(this.partido.idLocal, [ValidacionEquipo.equipoRequired]),
       visitante: new FormControl(this.partido.idVisitante, [ValidacionEquipo.equipoRequired]),
-      date: new FormGroup('', [Validators.required]),
-      time: new FormGroup('', [Validators.required])
+      date: new FormControl(fecha, [Validators.required]),
+      time: new FormControl(hora, [Validators.required])
     })
   }
 
   submit() {
-    if (this.formularioPartido.valid){
+    if (this.formularioPartido.valid) {
       let partido: Partido = {
-        id : this.partido.id,
+        id: this.partido.id,
         idLocal: this.formularioPartido.value.local!,
         idVisitante: this.formularioPartido.value.visitante!,
         fechaHora: this.formularioPartido.value.date!.toString() + " " + this.formularioPartido.value.time!.toString(),
@@ -48,8 +58,8 @@ export class EditPartidoComponent implements OnInit {
     }
   }
 
-  volver () {
-    this.router.navigate(['/partidos/detail/', this.idPartido])
+  volver() {
+    this.router.navigate(['/partidos'])
   }
 
   protected readonly equipos_data = equipos_data;

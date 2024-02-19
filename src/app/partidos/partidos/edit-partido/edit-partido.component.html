@@ -5,7 +5,8 @@
     <br>
     <select formControlName="local" style="width: 100%">
       <option>--selecciona un equipo--</option>
-      <option *ngFor="let equipo of equipos_data">{{equipo.id}}</option>
+      <option *ngFor="let equipo of equipos_data" [value]="equipo.id">{{equipo.id}}</option>
+      <option selected [value]="partido.idLocal">{{partido.idLocal}}</option>
     </select>
     <span *ngIf="formularioPartido.get('local')?.errors?.['equipoRequired']"> Campo obligatorio </span>
   </p>
@@ -14,7 +15,8 @@
     <br>
     <select formControlName="visitante" style="width: 100%">
       <option>--selecciona un equipo--</option>
-      <option *ngFor="let equipo of equipos_data">{{equipo.id}}</option>
+      <option *ngFor="let equipo of equipos_data" [value]="equipo.id">{{equipo.id}}</option>
+      <option selected [value]="partido.idVisitante">{{partido.idVisitante}}</option>
     </select>
     <span *ngIf="formularioPartido.get('visitante')?.errors?.['equipoRequired']"> Campo obligatorio </span>
   </p>
