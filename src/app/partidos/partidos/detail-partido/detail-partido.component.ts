@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Partido} from "../../../modelos/partido";
 import {PartidosService} from "../../../servicios/partidos.service";
 
@@ -14,7 +14,7 @@ export class DetailPartidoComponent implements OnInit{
 
   golesLocal = 0;
   golesVisitante = 0;
-  constructor(private route : ActivatedRoute, private partidoService : PartidosService) {}
+  constructor(private route : ActivatedRoute, private partidoService : PartidosService, private router : Router) {}
 
   ngOnInit(){
     this.idPartido = this.route.snapshot.params['id'];
@@ -31,6 +31,11 @@ export class DetailPartidoComponent implements OnInit{
       }
     }
     return total
+  }
+
+  eliminar(){
+    this.partidoService.eliminarPartido(this.idPartido)
+    this.router.navigate(['/partidos'])
   }
 
 }

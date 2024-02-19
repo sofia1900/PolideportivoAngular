@@ -28,13 +28,23 @@ export class PartidosService {
     return partidoElegido!
   }
 
-  editPartido (partidoElegido : Partido){
-    for (let partido of partidos_data){
-      if (partido.id == partidoElegido.id){
-        partido = partidoElegido
+  eliminarPartido(id : number){
+    for (let i = 0 ; i< partidos_data.length ; i++){
+      if (partidos_data[i].id == id){
+        partidos_data.slice(i,1)
         break
       }
     }
+  }
+
+  editPartido (partidoElegido : Partido){
+    for (let i = 0 ; i< partidos_data.length ; i++){
+      if (partidos_data[i].id == partidoElegido.id){
+        partidos_data.slice(i,1)
+        break
+      }
+    }
+    partidos_data.push(partidoElegido)
   }
 
   contarPartidos(equipo : string){

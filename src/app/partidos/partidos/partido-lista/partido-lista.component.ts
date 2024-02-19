@@ -24,6 +24,4 @@ export class PartidoListaComponent implements OnInit {
       partido.idLocal.toLowerCase().includes(this.buscador.toLowerCase()) ||
       partido.idVisitante.toLowerCase().includes(this.buscador.toLowerCase()))
   }
-
-
 }

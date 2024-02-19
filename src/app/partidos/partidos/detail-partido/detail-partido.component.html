@@ -4,7 +4,7 @@
   </div>
   <div class="col-3">
     <button class="btn-primary" style="margin-right: 10px;" [routerLink]="['/partidos/edit', partido.id]">Editar</button>
-    <button class="btn-primary">Eliminar</button>
+    <button class="btn-primary" (click)="eliminar()">Eliminar</button>
   </div>
 </div>
 <div style="margin-top: 50px">
