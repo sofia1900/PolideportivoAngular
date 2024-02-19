@@ -1,1 +1,5 @@
-<p>equipo-tarjetas works!</p>
+<h5>Tarjetas de {{idEquipo}}</h5>
+<div *ngFor="let tarjeta of tarjetas">
+  {{tarjeta.fechaHora}} TARJETA {{tarjeta.tipoTarjeta}}
+</div>
+
