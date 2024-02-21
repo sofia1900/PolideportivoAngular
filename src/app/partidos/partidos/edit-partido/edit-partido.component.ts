@@ -23,9 +23,7 @@ export class EditPartidoComponent implements OnInit {
     time: FormControl<string | null>;
   }>
 
-
-  constructor(private service: PartidosService, private router: Router, private route: ActivatedRoute) {
-  }
+  constructor(private service: PartidosService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.idPartido = this.route.snapshot.params['id'];
