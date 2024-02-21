@@ -8,9 +8,14 @@
   <div *ngIf="equiposFiltrados().length > 0 ; else vacio"
        style="display: flex; justify-content: space-around; flex-wrap: wrap;">
     <div style="width: 300px; height: 100px ; border: 2px solid black; margin:10px; text-align: center;"
-         *ngFor="let equipo of equiposFiltrados()" [routerLink]="['detalle/', equipo.id]">
-      <h3>{{equipo.id}}</h3>
-      <p>{{verPartidos(equipo.id)}} partidos</p>
+         *ngFor="let equipo of equiposFiltrados()" [routerLink]="['detalle/', equipo.id]" class="row">
+      <div class="col-3" style="padding-top: 30px;">
+        <i class="bi bi-person-plus-fill"></i>
+      </div>
+      <div class="col"style="padding-top: 10px">
+        <h3>{{equipo.id}}</h3>
+        <p>{{verPartidos(equipo.id)}} partidos</p>
+      </div>
     </div>
   </div>
   <ng-template #vacio>

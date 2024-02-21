@@ -4,6 +4,7 @@ import {HomeComponent} from "./comun/home/home.component";
 import {NoDisponibleComponent} from "./comun/no-disponible/no-disponible.component";
 import {PartidosComponent} from "./partidos/partidos/partidos.component";
 import {EquiposComponent} from "./equipos/equipos/equipos.component";
+import {SucesosComponent} from "./sucesos/sucesos/sucesos.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'partidos', component: PartidosComponent,
     loadChildren: () => import('./partidos/partidos.module').then(m => m.PartidosModule)
+  },
+  {
+    path: 'sucesos', component: SucesosComponent,
+    loadChildren: () => import('./sucesos/sucesos.module').then(m => m.SucesosModule)
   }
 ];
 

@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-9">
-    <a [routerLink]="['/equipos']">Volver a equipos</a>
+    <h5 [routerLink]="['/equipos']"><i class="bi bi-arrow-left"></i> Volver a equipos</h5>
   </div>
   <div class="col-3">
-    <button class="btn-primary" style="margin-right: 10px;">Editar</button>
-    <button class="btn-primary">Eliminar</button>
+    <button class="btn btn-warning" style="margin-right: 10px;">Editar</button>
+    <button class="btn btn-danger">Eliminar</button>
   </div>
 </div>
 <br><br><br>
@@ -22,9 +22,9 @@
 </div>
 <br><br>
 <div class="row">
-  <a  class="col" [routerLink]="['equipo-partidos', equipo.id]">Partidos</a>
-  <a  class="col" [routerLink]="['equipo-tarjetas', equipo.id]">Tarjetas</a>
-  <a  class="col" [routerLink]="['equipo-goles', equipo.id]">Goles</a>
+  <a  class="col link-success link-underline-opacity-0" [routerLink]="['equipo-partidos', equipo.id]" style="border: 1px solid darkgray; padding:10px; border-radius: 5px; margin-right: 10px"><b>Partidos</b></a>
+  <a  class="col link-success link-underline-opacity-0" [routerLink]="['equipo-tarjetas', equipo.id]" style="border: 1px solid darkgray; padding:10px; border-radius: 5px; margin-right: 10px"><b>Tarjetas</b></a>
+  <a  class="col link-success link-underline-opacity-0" [routerLink]="['equipo-goles', equipo.id]" style="border: 1px solid darkgray; padding:10px; border-radius: 5px"><b>Goles</b></a>
 </div>
 <br>
 <div>

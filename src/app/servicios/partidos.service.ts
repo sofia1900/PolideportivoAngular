@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {partidos_data} from "../data/partidos.data";
-import {Partido} from "../modelos/partido";
+import {Gol, Partido, Tarjeta} from "../modelos/partido";
 import {Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PartidosService {
+
+  goles! : Gol[]
+  tarjetas! : Tarjeta[]
   constructor() { }
 
   getPartidos () : Observable<Partido[]> {

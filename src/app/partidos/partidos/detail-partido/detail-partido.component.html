@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-9">
-    <a [routerLink]="['/partidos']">Volver a partidos</a>
+    <h5 [routerLink]="['/partidos']"> <i class="bi bi-arrow-left"></i> Volver a partidos</h5>
   </div>
   <div class="col-3">
-    <button class="btn-primary" style="margin-right: 10px;" [routerLink]="['/partidos/edit', partido.id]">Editar</button>
-    <button class="btn-primary" (click)="eliminar()">Eliminar</button>
+    <button class="btn btn-warning" style="margin-right: 10px;" [routerLink]="['/partidos/edit', partido.id]">Editar</button>
+    <button class="btn btn-danger" (click)="eliminar()">Eliminar</button>
   </div>
 </div>
 <div style="margin-top: 50px">
@@ -42,7 +42,7 @@
   </div>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; margin-top: 50px">
-  <button style="margin: 0">Añadir suceso</button>
+  <button style="margin: 0" class="btn btn-info">Añadir suceso</button>
 </div>
 
 
