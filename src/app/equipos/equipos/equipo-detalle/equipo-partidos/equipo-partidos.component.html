@@ -1,4 +1,9 @@
-<h5>Partidos de {{idEquipo}}</h5>
-<div *ngFor="let partido of partidos">
+<div class="border-end border-bottom border-start" style="padding: 10px">
+  <h5>Partidos de {{idEquipo}}</h5>
+  <div *ngFor="let partido of partidos">
     {{partido.fechaHora}} {{partido.idLocal}} - {{partido.idVisitante}}
+  </div>
+  <div *ngIf="partidos.length == 0">
+    No hay partidos registrados
+  </div>
 </div>

@@ -1,5 +1,9 @@
-<h5>Tarjetas de {{idEquipo}}</h5>
-<div *ngFor="let tarjeta of tarjetas">
-  {{tarjeta.fechaHora}} TARJETA {{tarjeta.tipoTarjeta}}
+<div class="border-end border-bottom border-start" style="padding: 10px">
+  <h5>Tarjetas de {{idEquipo}}</h5>
+  <div *ngFor="let tarjeta of tarjetas">
+    {{tarjeta.fechaHora}} TARJETA {{tarjeta.tipoTarjeta}}
+  </div>
+  <div *ngIf="tarjetas.length == 0">
+    No hay tarjetas registradas
+  </div>
 </div>
-

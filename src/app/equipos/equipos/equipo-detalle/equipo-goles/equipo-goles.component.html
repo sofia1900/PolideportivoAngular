@@ -1,4 +1,9 @@
-<h5>Goles de {{idEquipo}}</h5>
-<div *ngFor="let gol of goles">
-  {{gol.fechaHora}} GOL
+<div class="border-end border-bottom border-start" style="padding: 10px">
+  <h5>Goles de {{idEquipo}}</h5>
+  <div *ngFor="let gol of goles">
+    {{gol.fechaHora}} GOL
+  </div>
+  <div *ngIf="goles.length == 0">
+    No hay goles registrados
+  </div>
 </div>

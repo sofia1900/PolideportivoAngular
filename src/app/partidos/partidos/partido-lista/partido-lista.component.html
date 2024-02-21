@@ -5,7 +5,7 @@
   </div>
 
   <!-- Lista -->
-  <div *ngIf="partidos.length > 0 ; else vacio">
+  <div *ngIf="partidosFiltrados().length > 0 ; else vacio">
     <table>
       <tbody>
         <tr *ngFor="let partido of partidosFiltrados()" [routerLink]="['detail/', partido.id]" >
@@ -16,7 +16,7 @@
     </table>
   </div>
   <ng-template #vacio>
-    <div>NO HAY PARTIDOS</div>
+    <div>No se han encontrado partidos con "{{buscador}}" </div>
   </ng-template>
 
 </div>
